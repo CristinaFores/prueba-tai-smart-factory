@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import GlobalStyle from "../../style/GlobalStyle";
 import CardMachine from "./CardMachine";
 
 describe("Given a CardMachine component", () => {
@@ -17,17 +18,20 @@ describe("Given a CardMachine component", () => {
       };
 
       render(
-        <CardMachine
-          wohnumber={machine.wohnumber}
-          wkuname={machine.wkuname}
-          sitcolor={machine.sitcolor}
-          sitname={machine.sitname}
-          speed={machine.speed}
-          matcode={machine.matcode}
-          matname={machine.matname}
-          quantityrequired={machine.quantityrequired}
-          quantityproduced={machine.quantityproduced}
-        />
+        <>
+          <GlobalStyle />
+          <CardMachine
+            wohnumber={machine.wohnumber}
+            wkuname={machine.wkuname}
+            sitcolor={machine.sitcolor}
+            sitname={machine.sitname}
+            speed={machine.speed}
+            matcode={machine.matcode}
+            matname={machine.matname}
+            quantityrequired={machine.quantityrequired}
+            quantityproduced={machine.quantityproduced}
+          />
+        </>
       );
 
       const expectList = screen.getByRole("listitem");

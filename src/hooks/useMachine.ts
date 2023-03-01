@@ -38,8 +38,6 @@ const useMachines = () => {
       });
       const newMachines = await response.json();
 
-      setuiState(hiddeLoading);
-
       setMachines(newMachines.Payload[3].workunits);
     } catch (err: unknown) {
       setuiState({
@@ -50,6 +48,8 @@ const useMachines = () => {
         },
         isLoading: false,
       });
+    } finally {
+      setuiState(hiddeLoading);
     }
   }, []);
 

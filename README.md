@@ -2,8 +2,6 @@
 
 > Web application represent the returned data by simulating a factory machine monitor.
 
-▶️ Link the project: https://prueba-tai-smart-factory.netlify.app/
-
 </br>
 
 # 🎨Screenshots

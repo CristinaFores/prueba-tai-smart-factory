@@ -39,7 +39,7 @@ const ListMachines = (): JSX.Element => {
               rotated={true}
               barGroupPadding={0.4}
               width={"100%"}
-              height={150}
+              height={180}
               dataSource={[machine]}
             >
               <Label visible={true}>
